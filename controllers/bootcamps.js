@@ -3,14 +3,15 @@
 // GET /api/v1/bootcamps
 //@acess public
 exports.getBootcamps =(req,res,next) =>{
-    res.status(200).json({success:true,msg:'Show all bootcamps'});
+    res.status(200).json({success:true,msg:'Show all bootcamps',hello:req.hello});
 }
 
 // Get a single  bootcamp
 // GET /api/v1/bootcamps/:id
 //@acess public
 exports.getBootcamp =(req,res,next) =>{
-    res.status(200).json({success:true,msg:`Get a bootcamp with ${req.params.id}`});
+
+    res.status(200).json({ success:true,msg:`Get a bootcamp with ${req.params.id}`});
 }
 
 // Post  Create new bootcamp
