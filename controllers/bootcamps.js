@@ -9,6 +9,7 @@ exports.getBootcamps = async (req,res,next) =>{
         const bootcamp = await Bootcamp.find() ;// gets all the data from this collection
         res.status(200).json({
             success:true,
+            count:bootcamp.length,
             data:bootcamp
         })
     }catch (e) {
@@ -69,13 +70,57 @@ exports.createBootcamp = async (req,res,next) =>{
 // PUT  Update bootcamp
 // PUT /api/v1/bootcamp/:id
 //@acess private
-exports.updateBootcamp =(req,res,next) =>{
+exports.updateBootcamp = async (req,res,next) =>{
+    try{
+        const bootcamp = await  Bootcamp.findByIdAndUpdate(req.params.id,req.body,{
+            new:true,
+            runValidators:true
+        });
+        if(!bootcamp){
+            return res.status(400).json({
+                success:false,
+                msg:'This id does not exist and cannot be updated'
+            })
+        }
+        res.status(200).json({
+            data:bootcamp,
+            success:true
+        })
+    }catch (e) {
+        console.log(colors.red(e)) ;
+        res.status(400).json({
+            success:false,
+            error:e
+        });
+    }
+
     res.status(200).json({success:true,msg:`Update a bootcamp with ${req.params.id}`});
 }
 
 //DELETE Delete Bootcamp
 //DELETE /api/v1/bootcamp/:id
 //@acess private
-exports.deleteBootcamp =(req,res,next) =>{
+exports.deleteBootcamp = async (req,res,next) =>{
+    try{
+        const bootcamp = await Bootcamp.findByIdAndDelete(req.params.id);
+
+        if(!bootcamp){
+          return  res.status(200).json({
+                success:true,
+                msg:'This id does not exist'
+            })
+        }
+        res.status(200).json({
+            success:true,
+            msg:'Deleted '
+        })
+
+    }catch (e) {
+        console.log(colors.red(e)) ;
+        res.status(400).json({
+            success:false,
+            error:e
+        });
+    }
     res.status(200).json({success:true,msg:`Delete bootcamp with ${req.params.id}`});
 }
