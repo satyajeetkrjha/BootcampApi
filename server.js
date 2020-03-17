@@ -13,6 +13,8 @@ dotenv.config({path: './config/config.env'});
 connectDB();
 
 const app = express()
+// Body parser to use req.body
+app.use(express.json())
 
 //Dev logging Middleware and Not in Production
 if(process.env.NODE_ENV === 'development'){
