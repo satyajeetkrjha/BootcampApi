@@ -4,8 +4,6 @@
     <list default="true" id="530527ee-ba8c-4508-a4a8-aaa76149637a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/bootcamps.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/bootcamps.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Bootcamp.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Bootcamp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +68,7 @@
       <option name="presentableId" value="Default" />
       <updated>1584214849783</updated>
       <workItem from="1584214853153" duration="6642000" />
-      <workItem from="1584465959972" duration="1419000" />
+      <workItem from="1584465959972" duration="2287000" />
     </task>
     <servers />
   </component>
@@ -118,22 +116,22 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="314" y="52" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1584297980186" />
-    <state width="1419" height="303" key="GridCell.Tab.0.bottom" timestamp="1584475431863">
+    <state width="1419" height="240" key="GridCell.Tab.0.bottom" timestamp="1584476224340">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="303" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1584475431863" />
-    <state width="1419" height="303" key="GridCell.Tab.0.center" timestamp="1584475431861">
+    <state width="1419" height="240" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1584476224340" />
+    <state width="1419" height="240" key="GridCell.Tab.0.center" timestamp="1584476224337">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="303" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1584475431861" />
-    <state width="1419" height="303" key="GridCell.Tab.0.left" timestamp="1584475431861">
+    <state width="1419" height="240" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1584476224337" />
+    <state width="1419" height="240" key="GridCell.Tab.0.left" timestamp="1584476224330">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="303" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1584475431861" />
-    <state width="1419" height="303" key="GridCell.Tab.0.right" timestamp="1584475431862">
+    <state width="1419" height="240" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1584476224330" />
+    <state width="1419" height="240" key="GridCell.Tab.0.right" timestamp="1584476224339">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="303" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1584475431862" />
+    <state width="1419" height="240" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1584476224339" />
     <state width="1419" height="303" key="GridCell.Tab.1.bottom" timestamp="1584475431866">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -202,7 +200,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/controllers/bootcamps.js</url>
-          <line>23</line>
+          <line>35</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>

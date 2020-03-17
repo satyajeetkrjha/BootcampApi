@@ -1,6 +1,6 @@
 
 const Bootcamp = require('../models/Bootcamp');
-
+const colors = require('colors')
 // Get all bootcamps
 // GET /api/v1/bootcamps
 //@acess public
@@ -19,9 +19,21 @@ exports.getBootcamp =(req,res,next) =>{
 // Post  Create new bootcamp
 // POST /api/v1/bootcamps
 //@acess private
-exports.createBootcamp =(req,res,next) =>{
-    console.log("body", req.body);
-    res.status(200).json({success:true,msg:'Create a  bootcamp'});
+exports.createBootcamp = async (req,res,next) =>{
+    try{
+        const bootcamp = await Bootcamp.create(req.body);
+        res.status(201).json({
+            success:true,
+            data:bootcamp
+        });
+    }catch (e) {
+       console.log(colors.red(e)) ;
+       res.status(400).json({
+           success:false,
+           error:e
+       });
+    }
+
 }
 
 // PUT  Update bootcamp
