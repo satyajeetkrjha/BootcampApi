@@ -39,12 +39,13 @@ exports.getBootcamp = async (req,res,next) =>{
             data:bootcamp
         })
     }catch (e) {
-       res.json({
-           success:false,
-           error:e
-       })
+        next(e)
+       // res.json({
+       //     success:false,
+       //     error:e
+       // })
     }
-    res.status(200).json({ success:true,msg:`Get a bootcamp with ${req.params.id}`});
+
 }
 
 // Post  Create new bootcamp
@@ -94,7 +95,7 @@ exports.updateBootcamp = async (req,res,next) =>{
         });
     }
 
-    res.status(200).json({success:true,msg:`Update a bootcamp with ${req.params.id}`});
+
 }
 
 //DELETE Delete Bootcamp
@@ -122,5 +123,5 @@ exports.deleteBootcamp = async (req,res,next) =>{
             error:e
         });
     }
-    res.status(200).json({success:true,msg:`Delete bootcamp with ${req.params.id}`});
+
 }
