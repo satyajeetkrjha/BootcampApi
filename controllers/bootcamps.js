@@ -1,23 +1,22 @@
 const Bootcamp = require('../models/Bootcamp');
 const ErrorResponse = require('../utils/errorResponse');
+const asyncHandler = require('../middleware/async');
 
 const colors = require('colors');
 // Get all bootcamps
 // GET /api/v1/bootcamps
 //@acess public
-exports.getBootcamps = async (req, res, next) => {
-    try {
-        const bootcamp = await Bootcamp.find();// gets all the data from this collection
-        res.status(200).json({
-            success: true,
-            count: bootcamp.length,
-            data: bootcamp
-        })
-    } catch (e) {
-        next(e)
-    }
+exports.getBootcamps = asyncHandler(async (req, res, next) => {
 
-};
+    const bootcamp = await Bootcamp.find();// gets all the data from this collection
+    res.status(200).json({
+        success: true,
+        count: bootcamp.length,
+        data: bootcamp
+    })
+
+
+});
 
 // Get a single  bootcamp
 // GET /api/v1/bootcamps/:id
