@@ -14,10 +14,7 @@ exports.getBootcamps = async (req, res, next) => {
             data: bootcamp
         })
     } catch (e) {
-        res.status(400).json({
-            success: false,
-            error: e
-        })
+        next(e)
     }
 
 };
@@ -37,7 +34,7 @@ exports.getBootcamp = async (req,res,next) =>{
             data: bootcamp
         })
     } catch (e) {
-        next(new ErrorResponse(`Bootcamp not found with the id of ${req.params.id}`, 404))
+        next(e);
     }
 
 };
@@ -53,11 +50,7 @@ exports.createBootcamp = async (req,res,next) =>{
             data: bootcamp
         });
     } catch (e) {
-        console.log(colors.red(e));
-        res.status(400).json({
-            success: false,
-            error: e
-        });
+        next(e)
     }
 
 };
@@ -82,11 +75,7 @@ exports.updateBootcamp = async (req,res,next) =>{
             success: true
         })
     } catch (e) {
-        console.log(colors.red(e));
-        res.status(400).json({
-            success: false,
-            error: e
-        });
+        next(e)
     }
 
 
@@ -111,11 +100,7 @@ exports.deleteBootcamp = async (req,res,next) =>{
         })
 
     } catch (e) {
-        console.log(colors.red(e));
-        res.status(400).json({
-            success: false,
-            error: e
-        });
+        next(e)
     }
 
 };
