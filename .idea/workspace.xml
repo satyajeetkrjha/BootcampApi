@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="530527ee-ba8c-4508-a4a8-aaa76149637a" name="Default Changelist" comment="moved env file out of congfig which solves the issue of not reading api key first and added the geocoder to get coordinates before saving">
-      <change afterPath="$PROJECT_DIR$/seeder.js" afterDir="false" />
+    <list default="true" id="530527ee-ba8c-4508-a4a8-aaa76149637a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/bootcamps.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/bootcamps.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/bootcamps.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/bootcamps.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +77,7 @@
       <workItem from="1584214853153" duration="6642000" />
       <workItem from="1584465959972" duration="9573000" />
       <workItem from="1584636214808" duration="9555000" />
-      <workItem from="1584737661444" duration="1655000" />
+      <workItem from="1584737661444" duration="2757000" />
     </task>
     <task id="LOCAL-00001" summary="proper error logging">
       <created>1584483357006</created>
@@ -120,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584664084009</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="dumping data into database with a seeder using process args">
+      <created>1584739616135</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1584739616135</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,7 +159,8 @@
     <MESSAGE value="validation error if req body does not contain the required data so this custom handler handles all this for us pretty awesome this is" />
     <MESSAGE value="async handler middleware instead of writing try catch at all places but i used at just one place" />
     <MESSAGE value="moved env file out of congfig which solves the issue of not reading api key first and added the geocoder to get coordinates before saving" />
-    <option name="LAST_COMMIT_MESSAGE" value="moved env file out of congfig which solves the issue of not reading api key first and added the geocoder to get coordinates before saving" />
+    <MESSAGE value="dumping data into database with a seeder using process args" />
+    <option name="LAST_COMMIT_MESSAGE" value="dumping data into database with a seeder using process args" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -181,10 +190,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="618" y="283" width="822" height="594" key="#xdebugger.evaluate/0.0.1440.900@0.0.1440.900" timestamp="1584663695671" />
-    <state x="73" y="52" key="CommitChangelistDialog2" timestamp="1584737674452">
+    <state x="73" y="52" key="CommitChangelistDialog2" timestamp="1584739615752">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="73" y="52" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1584737674452" />
+    <state x="73" y="52" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1584739615752" />
     <state width="743" height="466" key="DebuggerActiveHint" timestamp="1584662191015">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -194,78 +203,78 @@
     </state>
     <state x="100" y="100" width="1240" height="700" key="DiffContextDialog/0.0.1440.900@0.0.1440.900" timestamp="1584483245129" />
     <state x="100" y="100" width="1240" height="700" key="DiffContextDialog/0.23.1440.801@0.23.1440.801" timestamp="1584483486876" />
-    <state width="1419" height="247" key="GridCell.Tab.0.bottom" timestamp="1584739578682">
+    <state width="1419" height="247" key="GridCell.Tab.0.bottom" timestamp="1584745257304">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="247" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1584739578682" />
-    <state width="1419" height="247" key="GridCell.Tab.0.center" timestamp="1584739578680">
+    <state width="1419" height="247" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1584745257304" />
+    <state width="1419" height="247" key="GridCell.Tab.0.center" timestamp="1584745257302">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="247" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1584739578680" />
-    <state width="1419" height="247" key="GridCell.Tab.0.left" timestamp="1584739578679">
+    <state width="1419" height="247" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1584745257302" />
+    <state width="1419" height="247" key="GridCell.Tab.0.left" timestamp="1584745257301">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="247" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1584739578679" />
-    <state width="1419" height="247" key="GridCell.Tab.0.right" timestamp="1584739578681">
+    <state width="1419" height="247" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1584745257301" />
+    <state width="1419" height="247" key="GridCell.Tab.0.right" timestamp="1584745257303">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="247" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1584739578681" />
-    <state width="1419" height="303" key="GridCell.Tab.1.bottom" timestamp="1584739039085">
+    <state width="1419" height="247" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1584745257303" />
+    <state width="1419" height="303" key="GridCell.Tab.1.bottom" timestamp="1584745221482">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="303" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1584739039085" />
-    <state width="1419" height="303" key="GridCell.Tab.1.center" timestamp="1584739039083">
+    <state width="1419" height="303" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1584745221482" />
+    <state width="1419" height="303" key="GridCell.Tab.1.center" timestamp="1584745221480">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="303" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1584739039083" />
-    <state width="1419" height="303" key="GridCell.Tab.1.left" timestamp="1584739039082">
+    <state width="1419" height="303" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1584745221480" />
+    <state width="1419" height="303" key="GridCell.Tab.1.left" timestamp="1584745221479">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="303" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1584739039082" />
-    <state width="1419" height="303" key="GridCell.Tab.1.right" timestamp="1584739039084">
+    <state width="1419" height="303" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1584745221479" />
+    <state width="1419" height="303" key="GridCell.Tab.1.right" timestamp="1584745221481">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="303" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1584739039084" />
-    <state width="1419" height="303" key="GridCell.Tab.2.bottom" timestamp="1584739039097">
+    <state width="1419" height="303" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1584745221481" />
+    <state width="1419" height="303" key="GridCell.Tab.2.bottom" timestamp="1584745221486">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="303" key="GridCell.Tab.2.bottom/0.0.1440.900@0.0.1440.900" timestamp="1584739039097" />
-    <state width="1419" height="303" key="GridCell.Tab.2.center" timestamp="1584739039087">
+    <state width="1419" height="303" key="GridCell.Tab.2.bottom/0.0.1440.900@0.0.1440.900" timestamp="1584745221486" />
+    <state width="1419" height="303" key="GridCell.Tab.2.center" timestamp="1584745221484">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="303" key="GridCell.Tab.2.center/0.0.1440.900@0.0.1440.900" timestamp="1584739039087" />
-    <state width="1419" height="303" key="GridCell.Tab.2.left" timestamp="1584739039086">
+    <state width="1419" height="303" key="GridCell.Tab.2.center/0.0.1440.900@0.0.1440.900" timestamp="1584745221484" />
+    <state width="1419" height="303" key="GridCell.Tab.2.left" timestamp="1584745221483">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="303" key="GridCell.Tab.2.left/0.0.1440.900@0.0.1440.900" timestamp="1584739039086" />
-    <state width="1419" height="303" key="GridCell.Tab.2.right" timestamp="1584739039095">
+    <state width="1419" height="303" key="GridCell.Tab.2.left/0.0.1440.900@0.0.1440.900" timestamp="1584745221483" />
+    <state width="1419" height="303" key="GridCell.Tab.2.right" timestamp="1584745221485">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="303" key="GridCell.Tab.2.right/0.0.1440.900@0.0.1440.900" timestamp="1584739039095" />
-    <state width="1419" height="303" key="GridCell.Tab.3.bottom" timestamp="1584739039102">
+    <state width="1419" height="303" key="GridCell.Tab.2.right/0.0.1440.900@0.0.1440.900" timestamp="1584745221485" />
+    <state width="1419" height="303" key="GridCell.Tab.3.bottom" timestamp="1584745221489">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="303" key="GridCell.Tab.3.bottom/0.0.1440.900@0.0.1440.900" timestamp="1584739039102" />
-    <state width="1419" height="303" key="GridCell.Tab.3.center" timestamp="1584739039099">
+    <state width="1419" height="303" key="GridCell.Tab.3.bottom/0.0.1440.900@0.0.1440.900" timestamp="1584745221489" />
+    <state width="1419" height="303" key="GridCell.Tab.3.center" timestamp="1584745221488">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="303" key="GridCell.Tab.3.center/0.0.1440.900@0.0.1440.900" timestamp="1584739039099" />
-    <state width="1419" height="303" key="GridCell.Tab.3.left" timestamp="1584739039098">
+    <state width="1419" height="303" key="GridCell.Tab.3.center/0.0.1440.900@0.0.1440.900" timestamp="1584745221488" />
+    <state width="1419" height="303" key="GridCell.Tab.3.left" timestamp="1584745221487">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="303" key="GridCell.Tab.3.left/0.0.1440.900@0.0.1440.900" timestamp="1584739039098" />
-    <state width="1419" height="303" key="GridCell.Tab.3.right" timestamp="1584739039100">
+    <state width="1419" height="303" key="GridCell.Tab.3.left/0.0.1440.900@0.0.1440.900" timestamp="1584745221487" />
+    <state width="1419" height="303" key="GridCell.Tab.3.right" timestamp="1584745221488">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="303" key="GridCell.Tab.3.right/0.0.1440.900@0.0.1440.900" timestamp="1584739039100" />
+    <state width="1419" height="303" key="GridCell.Tab.3.right/0.0.1440.900@0.0.1440.900" timestamp="1584745221488" />
     <state x="229" y="89" key="SettingsEditor" timestamp="1584216659912">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="229" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1584216659912" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1584664097810">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1584739670004">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1584664097810" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1584739670004" />
     <state width="720" height="450" key="XDebugger.FullValuePopup" timestamp="1584651800079">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -318,25 +327,109 @@
           <url>file://$PROJECT_DIR$/seeder.js</url>
           <line>31</line>
           <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="56" />
+          <option name="timeStamp" value="57" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/seeder.js</url>
           <line>32</line>
           <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="57" />
+          <option name="timeStamp" value="58" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/seeder.js</url>
           <line>33</line>
           <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="58" />
+          <option name="timeStamp" value="59" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/seeder.js</url>
-          <line>34</line>
+          <url>file://$PROJECT_DIR$/controllers/bootcamps.js</url>
+          <line>109</line>
           <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="59" />
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/controllers/bootcamps.js</url>
+          <line>110</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/controllers/bootcamps.js</url>
+          <line>113</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/controllers/bootcamps.js</url>
+          <line>114</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/controllers/bootcamps.js</url>
+          <line>115</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/controllers/bootcamps.js</url>
+          <line>118</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/controllers/bootcamps.js</url>
+          <line>120</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/controllers/bootcamps.js</url>
+          <line>121</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/controllers/bootcamps.js</url>
+          <line>122</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/controllers/bootcamps.js</url>
+          <line>124</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/controllers/bootcamps.js</url>
+          <line>125</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/controllers/bootcamps.js</url>
+          <line>126</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="72" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/controllers/bootcamps.js</url>
+          <line>127</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/controllers/bootcamps.js</url>
+          <line>128</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/controllers/bootcamps.js</url>
+          <line>129</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="75" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
