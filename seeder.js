@@ -37,7 +37,7 @@ const deleteData = async () => {
     try {
         await Bootcamp.deleteMany();
         console.log("data deleted");
-        proces.exit();
+        process.exit();
     } catch (err) {
         console.log("err in deleting data", err);
     }

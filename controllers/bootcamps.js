@@ -8,7 +8,11 @@ const colors = require('colors');
 //@acess public
 exports.getBootcamps = asyncHandler(async (req, res, next) => {
 
-    const bootcamp = await Bootcamp.find();// gets all the data from this collection
+    let queryStr = JSON.stringify(req.query);
+    queryStr=queryStr.replace(/\b(gt|gte|lt|lte|in)\b/g,match =>`$${match}`)
+    query=Bootcamp.find(JSON.parse(queryStr));
+
+    const bootcamp = await query
     res.status(200).json({
         success: true,
         count: bootcamp.length,
