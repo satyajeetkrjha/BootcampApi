@@ -22,7 +22,7 @@ app.use(express.json());
 
 //Dev logging Middleware and Not in Production
 if(process.env.NODE_ENV === 'development'){
-    app.use(morgan('dev'))
+   app.use(morgan('dev'))
 }
 
 

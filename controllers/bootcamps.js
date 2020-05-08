@@ -7,11 +7,28 @@ const colors = require('colors');
 // GET /api/v1/bootcamps
 //@acess public
 exports.getBootcamps = asyncHandler(async (req, res, next) => {
-
-    let queryStr = JSON.stringify(req.query);
+    // made a copy of everything in req.query before working on select
+    const reqQuery ={...req.query};
+    //Fields to exclude
+    const removeFields =['select']
+    //Removing the fields 'select' from the req.query
+    removeFields.forEach(param => delete reqQuery[param])
+    //created query string
+    console.log("reqQuery is",reqQuery)
+    let queryStr = JSON.stringify(reqQuery);
+    // creating operators  greater than ,less than
     queryStr=queryStr.replace(/\b(gt|gte|lt|lte|in)\b/g,match =>`$${match}`)
+    //Find the resource
     query=Bootcamp.find(JSON.parse(queryStr));
+    if(req.query.select){
+        //// include a and b, exclude other fields
+        // query.select('a b');
+        const fields =req.query.select.split(',').join(' ') // to get fields in above format to apply select of mongoose
+        console.log("fiels",fields);
+        query=query.select(fields); // we will only get those fields which we want to throw as json
 
+    }
+   //Execute the query
     const bootcamp = await query
     res.status(200).json({
         success: true,
