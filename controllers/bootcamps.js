@@ -28,6 +28,15 @@ exports.getBootcamps = asyncHandler(async (req, res, next) => {
         query=query.select(fields); // we will only get those fields which we want to throw as json
 
     }
+    //Sort
+    if(req.query.sort){
+      const sortBy =req.query.sort.split(',').join('')
+      console.log("query is",query);
+      query=query.sort(sortBy)
+    }
+    else {
+        query=query.sort('-createdAt')
+    }
    //Execute the query
     const bootcamp = await query
     res.status(200).json({
